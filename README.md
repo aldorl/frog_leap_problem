@@ -44,7 +44,7 @@ How to run function
 Run the following command:
 `ruby frog_leap.rb {river_width} {leaves_positions}`
 where {river_width} is the width of the river represented by integer X
-where {leaves_positions} is the order in which the leaves fall on the river represented by array A (stored as a file)
+and where {leaves_positions} is the order in which the leaves fall onto the surface of the river, represented by array A (stored as a file)
 
 Example:
 `ruby frog_leap.rb 5 falling_leaves.txt`
