@@ -1,12 +1,10 @@
 frog_leap_problem
 =================
-
 Function that returns the earliest time when a frog can jump to the other side of a river
 
 
 Problem Statement
 =================
-
 A small frog wants to get to the other side of a river. The frog is currently located at position 0, and wants to get to position X. Leaves fall from a tree onto the surface of the river.
 You are given a non-empty zero-indexed array A consisting of N integers representing the falling leaves. A[K] represents the position where one leaf falls at time K, measured in minutes.
 The goal is to find the earliest time when the frog can jump to the other side of the river. The frog can cross only when leaves appear at every position across the river from 1 to X.
@@ -39,3 +37,14 @@ Complexity:
 expected worst-case time complexity is O(N);
 expected worst-case space complexity is O(X), beyond input storage (not counting the storage required for input arguments).
 Elements of input arrays can be modified.
+
+
+How to run function
+===================
+Run the following command:
+`ruby frog_leap.rb {river_width} {leaves_positions}`
+where {river_width} is the width of the river represented by integer X
+where {leaves_positions} is the order in which the leaves fall on the river represented by array A (stored as a file)
+
+Example:
+`ruby frog_leap.rb 5 falling_leaves.txt`
