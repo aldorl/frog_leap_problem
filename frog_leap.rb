@@ -1,6 +1,7 @@
 class FrogLeap
   MIN_RIVER_WIDTH = 1
   MAX_RIVER_WIDTH = 100000
+  ERROR_RETURN_CODE = -1
   
   attr_accessor :river_width, :falling_leaves
   
@@ -16,14 +17,18 @@ class FrogLeap
     @falling_leaves = falling_leaves
   end
   
-  def show_time_result
-    leap_time = calculate_earliest_leap_time
-    puts leap_time == -1 ? "\n\nThe frog is never able to jump to the other side of the river" : "\n\nThe earliest time when the frog can jump to the other side of the river is at minute #{leap_time}"
+  def plain_time_result
+    return calculate_earliest_leap_time
+  end
+  
+  def show_verbose_time_result
+    leap_time = plain_time_result
+    return leap_time == -1 ? "\n\nThe frog is never able to jump to the other side of the river" : "\n\nThe earliest time when the frog can jump to the other side of the river is at minute #{leap_time}"
   end
   
   private
     def calculate_earliest_leap_time
-      puts "\n\nThis many leaves fall in total: #{falling_leaves.length}\n\n"
+      #puts "\n\nThis many leaves fall in total: #{falling_leaves.length}\n\n"
 
       # The unique_leaves_positions array size should be one more than the river width, given that it's a zero-indexed array
       unique_leaves_positions = Array.new(river_width+1, false)
@@ -33,12 +38,12 @@ class FrogLeap
         if unique_leaves_positions[leaf_position] == false
           unique_leaves_positions[leaf_position] = true
           unique_leaves_positions_counter += 1
-          puts "The first time a leaf falls in position #{leaf_position} is at minute #{time}"
-          puts "The leaves counter is now at #{unique_leaves_positions_counter}"
+          #puts "The first time a leaf falls in position #{leaf_position} is at minute #{time}"
+          #puts "The leaves counter is now at #{unique_leaves_positions_counter}"
         end
         return time if unique_leaves_positions_counter == river_width
       end
 
-      return -1
+      return ERROR_RETURN_CODE
     end
 end
