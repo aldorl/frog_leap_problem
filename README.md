@@ -42,9 +42,9 @@ Elements of input arrays can be modified.
 How to run function
 ===================
 Run the following command:
-`ruby frog_leap.rb {river_width} {leaves_positions}`
+`ruby frog_leap_time_calculator.rb {river_width} {leaves_positions}`
 where {river_width} is the width of the river represented by integer X
 and where {leaves_positions} is the order in which the leaves fall onto the surface of the river, represented by array A (stored as a file)
 
 Example:
-`ruby frog_leap.rb 5 falling_leaves.txt`
+`ruby frog_leap_time_calculator.rb 5 falling_leaves.txt`
