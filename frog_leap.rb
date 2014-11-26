@@ -41,5 +41,4 @@ class FrogLeap
 
       return -1
     end
-  
 end

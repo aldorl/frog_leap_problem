@@ -1,7 +1,7 @@
 require_relative 'frog_leap'
 
 def read_input_arguments
-  # First command-line argument, expected to be  an integer value between MIN_RIVER_WIDTH and MAX_RIVER_WIDTH
+  # First command-line argument, expected to be an integer value between MIN_RIVER_WIDTH and MAX_RIVER_WIDTH
   river_width = ARGV.shift.to_i
   puts "The width of the river is #{river_width}"
   

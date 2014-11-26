@@ -48,3 +48,9 @@ and where {leaves_positions} is the order in which the leaves fall onto the surf
 
 Example:
 `ruby frog_leap_time_calculator.rb 5 falling_leaves.txt`
+
+
+Instructions to run tests:
+Run the command `bundle install` if 'rspec gem' is not installed
+Run the command `rspec spec`
+See the tests pass and enjoy!
